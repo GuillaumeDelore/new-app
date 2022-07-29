@@ -16,12 +16,12 @@ export const navDashboard = [
     path: '/markets',
   },
   {
-    title: 'My Assets',
+    title: 'Deposit/Withdraw',
     icon: <FontAwesomeIcon icon={faWallet} />,
     path: '/dashboard',
   },
   {
-    title: 'Deposit/Withdraw',
+    title: 'Borrow/Repay',
     icon: <FontAwesomeIcon icon={faPiggyBank} />,
     path: '/access',
   },
