@@ -8,7 +8,7 @@ export default function Dashboard() {
     <div>
       <Title title="My Assets" />
       <CardAsset />
-      <Tabs color="pink" />
+      <Tabs color="red" />
     </div>
   )
 }
