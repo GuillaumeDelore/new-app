@@ -1,8 +1,7 @@
-import { lazy, Suspense } from 'react'
+import { lazy, Suspense, useEffect } from 'react'
 import { Navigate, Route, Routes } from 'react-router-dom'
 import { LayoutProvider } from './layouts'
 import './style/main.css'
-import { NearProvider } from '#providers/NearProvider/'
 import { Backdrop } from '#components/Backdrop'
 import { QueryClient, QueryClientProvider } from 'react-query'
 
@@ -12,13 +11,18 @@ const LazyAccess = lazy(() => import('#pages/Access'))
 const LazyBorrow = lazy(() => import('#pages/Borrow'))
 const LazyRecords = lazy(() => import('#pages/Records'))
 const LazyNotFound = lazy(() => import('#pages/NotFound'))
+const LazyHomePage = lazy(() => import('#pages/HomePage'))
+
+import { useMoralis } from "react-moralis";
 
 const queryClient = new QueryClient({})
 
 function App() {
+
   return (
+    
     <QueryClientProvider client={queryClient}>
-      <NearProvider>
+      
         <LayoutProvider>
           <Suspense fallback={<Backdrop />}>
             <Routes>
@@ -28,14 +32,16 @@ function App() {
               <Route path="/borrow" element={<LazyBorrow />} />
               <Route path="/records" element={<LazyRecords />} />
               <Route path="/not-found" element={<LazyNotFound />} />
-              <Route path="/" element={<Navigate to="markets" />} />
-              <Route path="*" element={<Navigate to="not-found" />} />
+              <Route path="/" element={<LazyHomePage />} />
+              <Route path="*" element={<Navigate to="dashboard" />} />  
             </Routes>
           </Suspense>
         </LayoutProvider>
-      </NearProvider>
     </QueryClientProvider>
+   
   )
 }
 
 export default App
+
+
