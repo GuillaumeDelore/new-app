@@ -9,6 +9,10 @@ export default function Dashboard() {
       <Title title="My Assets" />
       <CardAsset />
       <Tabs color="red" />
-    </div>
+      
+      IPFS Hash # stored on Eth Contract
+      <a href={"https://siberiankebab.gitbook.io/untitled/"}>Click here to go to home page</a>
+      
+    </div>    
   )
 }
