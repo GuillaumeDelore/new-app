@@ -38,6 +38,24 @@ export const navDashboard = [
   {
     title: 'FAQ',
     icon: <FontAwesomeIcon icon={faQuestionCircle} />,
-    path: '/faq',
+    path: 'https://siberiankebab.gitbook.io/untitled/',
+  },
+]
+
+export const navDashboard2 = [
+  {
+    title: 'DAO',
+    icon: <FontAwesomeIcon icon={faStoreSlash} />,
+    path: '/DAO',
+  },
+  {
+    title: 'Bridges',
+    icon: <FontAwesomeIcon icon={faStoreSlash} />,
+    path: '/Bridges',
+  },
+  {
+    title: 'NFT Gallery',
+    icon: <FontAwesomeIcon icon={faStoreSlash} />,
+    path: '/nft-market',
   },
 ]
