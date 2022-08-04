@@ -10,8 +10,6 @@ const LazyMarkets = lazy(() => import('#pages/Markets'))
 const LazyAccess = lazy(() => import('#pages/Access'))
 const LazyBorrow = lazy(() => import('#pages/Borrow'))
 
-import { useMoralis } from "react-moralis";
-
 const queryClient = new QueryClient({})
 
 function App() {
