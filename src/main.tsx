@@ -14,20 +14,12 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
 
         <ChakraProvider>
           <React.StrictMode>
-          <MoralisProvider serverUrl="https://pjk884yvw4xm.usemoralis.com:2053/server" appId="7aMXxh9JqydxZBbXpcsfaTp59Bj8pT4L65o66Vjv">
-
-
-              <App />
-               </MoralisProvider>
- 
+            <MoralisProvider serverUrl="https://pjk884yvw4xm.usemoralis.com:2053/server" appId="7aMXxh9JqydxZBbXpcsfaTp59Bj8pT4L65o66Vjv">
+                <App />
+            </MoralisProvider>
           </React.StrictMode>
         </ChakraProvider>
 
     </BrowserRouter>
 
 )
-
-/* 
-
-</MoralisProvider>
- */
