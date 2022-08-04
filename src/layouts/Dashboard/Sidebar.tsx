@@ -1,5 +1,5 @@
 import { Box, BoxProps } from '@chakra-ui/react'
-import { navDashboard, navDashboard2 } from './navConfig'
+import { navDashboard } from './navConfig'
 import { faEarth } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useRoutes, useMatch, useLocation, Link } from 'react-router-dom'

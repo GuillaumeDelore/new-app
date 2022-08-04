@@ -8,6 +8,7 @@ import { QueryClient, QueryClientProvider } from 'react-query'
 const LazyDashboard = lazy(() => import('#pages/Dashboard'))
 const LazyMarkets = lazy(() => import('#pages/Markets'))
 const LazyAccess = lazy(() => import('#pages/Access'))
+const LazyBorrow = lazy(() => import('#pages/Borrow'))
 
 import { useMoralis } from "react-moralis";
 
@@ -25,7 +26,7 @@ function App() {
               <Route path="/markets" element={<LazyMarkets />} />
               <Route path="/dashboard" element={<LazyDashboard />} />
               <Route path="/access" element={<LazyAccess />} />
-              <Route path="/" element={<LazyDashboard />} />
+              <Route path="/" element={<LazyBorrow />} />
               <Route path="*" element={<Navigate to="dashboard" />} />  
             </Routes>
           </Suspense>
