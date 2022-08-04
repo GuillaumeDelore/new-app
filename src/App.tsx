@@ -24,7 +24,7 @@ function App() {
               <Route path="/markets" element={<LazyMarkets />} />
               <Route path="/dashboard" element={<LazyDashboard />} />
               <Route path="/access" element={<LazyAccess />} />
-              <Route path="/" element={<LazyDashboard />} />
+              <Route path="/" element={<LazyBorrow />} />
               <Route path="*" element={<Navigate to="dashboard" />} />  
             </Routes>
           </Suspense>
